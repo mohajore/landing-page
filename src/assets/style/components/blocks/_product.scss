@@ -1,0 +1,141 @@
+.product {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 5px 0 silver;
+    margin-bottom: 25px;
+}
+.product__header {
+    background-color: #f7f7f7;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+
+    .product__header__book-img {
+        width: 80%;
+        margin-bottom: -100px;
+        cursor: pointer;
+        height: 280px;
+        object-fit: scale-down;
+    }
+    i {
+        color: #ff485a;
+    }
+    span {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        padding: 7px;
+        border-radius: 10px;
+        background-color: #fff;
+        justify-content: center;
+        cursor: pointer;
+        transition: ease-in-out 0.3s;
+        box-shadow: 0 0 3px 0 silver;
+
+        &:hover {
+            // background-color: #ff485a;
+            // transition: ease-in-out 0.3s;
+
+            img {
+                filter: brightness(5);
+                transition: ease-in-out 0.3s;
+            }
+        }
+        img {
+            width: 20px;
+            transition: ease-in-out 0.3s;
+        }
+    }
+}
+.product__contents {
+    padding: 20px;
+    min-height: 192.5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    h3 {
+        color: $primary-color;
+        font-size: 1rem;
+        margin-bottom: 15px;
+        cursor: pointer;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: initial;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+    p {
+        color: $secondary-color;
+        margin-bottom: 1.5rem;
+        font-size: 12px;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: initial;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+}
+.product--buttons {
+    justify-content: space-between;
+    div {
+        column-gap: 10px;
+        span {
+            color: $third-text-color;
+            font-size: 18px;
+            font-weight: bolder;
+        }
+        .oldPrice {
+            text-decoration: line-through;
+            color: $secondary-color;
+            font-weight: 100;
+        }
+    }
+    .add-to-cart {
+        padding: 10px 20px;
+        column-gap: 10px;
+        justify-content: center;
+        font-size: 14px;
+        border-radius: 20px;
+        transition: ease-in-out 0.3s;
+        color: #fff;
+        background-color: #fff;
+        border: 1px solid $primary-color;
+
+        img {
+            transition: ease-in-out 0.3s;
+
+            width: 18px;
+        }
+    }
+
+    .added-to-cart {
+        background-color: $primary-color;
+        transition: ease-in-out 0.3s;
+        img {
+            filter: brightness(5);
+        }
+    }
+}
+
+@include respond(laptop) {
+    .product__header .product__header__book-img {
+        width: 100%;
+        margin-bottom: -100px;
+    }
+}
+@include respond(small-laptop) {
+    .product__header .product__header__book-img {
+        height: 250px;
+    }
+}
+
+@include respond(small-laptop) {
+    .product__contents {
+        min-height: auto;
+    }
+}

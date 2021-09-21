@@ -1,0 +1,235 @@
+@import "../../abstract/mixins";
+.Header {
+  position: relative;
+  left: 0;
+  right: 0;
+  z-index: 1; /*Add this*/
+  height: 100px;
+  display: flex;
+  align-items: center;
+
+  position: absolute;
+  top: 0;
+  width: 100%;
+  // background-color: red;
+
+  .Header__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+      cursor: pointer;
+    }
+    .list-button {
+      display: flex;
+      justify-content: space-evenly;
+      flex: 0 0 600px;
+      .list {
+        ul {
+          display: flex;
+          list-style: none;
+          margin: 0px;
+          padding: 10px 0px;
+          li {
+            display: inline-block;
+            flex: 1;
+            .list__ul__li__a-drop-down {
+              margin-left: 1.5em;
+              color: white;
+              text-transform: capitalize;
+              font-size: 18px;
+            }
+            .list__UL__li__a {
+              margin-left: 1.5em;
+              color: white;
+              text-transform: capitalize;
+              font-size: 18px;
+              position: relative;
+              &::after {
+                content: "";
+                border-bottom: 3px solid white;
+                transition: all 0.35s;
+                transform: translateY(33px);
+                position: absolute;
+                right: 50%;
+                left: 50%;
+              }
+              &:hover {
+                &::after {
+                  transition: all 0.35s;
+                  right: 0;
+                  left: 0;
+                }
+              }
+            }
+            // Dropdown start
+            .dropdown-toggle {
+              &::after {
+                color: white;
+              }
+            }
+            .btn {
+              padding: 0;
+            }
+            .dropdown-menu {
+              inset: 0px 0px 0px 0px;
+              margin-top: 20px;
+              margin-left: 0px;
+              .dropdown-item {
+                padding: 10px 15px;
+              }
+              a {
+                color: grey;
+                padding: 0.2rem 0;
+                text-transform: capitalize;
+              }
+            }
+            // Dropdown end
+          }
+        }
+      }
+      .free-trial-button {
+        button {
+          text-transform: uppercase;
+          color: white;
+          background-image: linear-gradient(120deg, #6089e8 0%, #7bb2fd 100%);
+          padding: 15px 50px;
+          border-radius: 25px;
+          font-size: 12px;
+        }
+      }
+      .burger-menu-container {
+        display: none;
+      }
+    }
+  }
+}
+//========================================================== Burger-Menu Style Start
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  right: 36px;
+  top: 36px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #373a47;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: #a90000;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+  top: 0;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #4375f8;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+  width: 250px !important;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #ca6ef3;
+  width: 50px !important;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  // padding: 0.8em;
+  padding: 0;
+  margin-left: 90px;
+}
+/*  item  */
+.bm-item {
+  font-size: 20px;
+  color: white;
+}
+// menu-item
+.menu-item {
+  text-transform: capitalize;
+}
+/* Individual item */
+.bm-item {
+  display: inline-block;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+  display: none;
+}
+//========================================================== Burger-Menu Style End
+@include respond(small-laptop) {
+  .Header {
+    .Header__content {
+      .list-button {
+        flex: 0 0 250px;
+        .list {
+          display: none;
+        }
+        .burger-menu-container {
+          display: block;
+        }
+      }
+    }
+  }
+}
+@include respond(tablet) {
+  .Header {
+    .Header__content {
+      .list-button {
+        flex: 0 0 327px;
+      }
+    }
+  }
+}
+@include respond(large-phone) {
+  .Header {
+    overflow: hidden;
+    .Header__content {
+      .list-button {
+        .free-trial-button {
+          button {
+            padding: 10px 20px;
+          }
+        }
+      }
+    }
+  }
+}
+@include respond(phone) {
+  .Header {
+    flex-direction: column;
+    .Header__content {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+}

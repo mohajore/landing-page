@@ -1,0 +1,6 @@
+@import "../../../abstract/mixins";
+.appScreen {
+  .swiper-container {
+    overflow: hidden;
+  }
+}

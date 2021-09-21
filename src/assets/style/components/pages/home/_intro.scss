@@ -1,0 +1,69 @@
+@import "../../../abstract/mixins";
+.intro {
+  // background: url(../../../../images/slider1.jpg) no-repeat center center fixed;
+  // background-size: cover;
+  // height: 1000px;
+  overflow: hidden;
+  background-image: url(../../../../../images/slider1.jpg);
+  background-size: cover;
+  background-position: bottom;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  // border: solid 1px white;
+  padding-top: 70px;
+  .intro__left-side {
+    color: white;
+    margin-top: 200px;
+    h4 {
+      font-size: 48px;
+      font-family: $main-font-bold;
+    }
+    p {
+      font-size: 18px;
+      margin-top: 30px;
+      color: #e9ecff;
+    }
+    .appstore-googleplay-icons {
+      margin-top: 30px;
+      display: flex;
+      gap: 20px;
+      img {
+        cursor: pointer;
+      }
+    }
+  }
+  .intro__right-side {
+    margin-top: 100px;
+  }
+}
+@include respond(small-laptop) {
+  .intro {
+    .intro__right-side {
+      img {
+        width: 120%;
+      }
+    }
+    .intro__left-side {
+      margin-top: 120px;
+      .appstore-googleplay-icons {
+        img {
+          width: 45%;
+        }
+      }
+    }
+  }
+}
+@include respond(tablet) {
+  .intro {
+    height: 750px;
+    .intro__right-side {
+      display: none;
+    }
+    .intro__left-side {
+      margin-top: 100px;
+      h4 {
+        font-size: 37px;
+      }
+    }
+  }
+}

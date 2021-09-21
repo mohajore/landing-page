@@ -1,0 +1,46 @@
+@import "../../../abstract/mixins";
+.clients {
+  //   img {
+  //     cursor: pointer;
+  //     margin: 100px 0;
+  //   }
+  .clients-logo {
+    margin: 100px 0;
+    display: flex;
+    column-gap: 80px;
+    row-gap: 30px;
+    flex-wrap: wrap;
+    // img:nth-child(5) {
+    //   margin: 0 auto;
+    // }
+    img {
+      margin: 0 auto;
+    }
+  }
+}
+@include respond(small-laptop) {
+  .clients {
+    .clients-logo {
+      //   img:nth-child(4),
+      //   img:nth-child(5) {
+      //     margin: 0px auto;
+      //   }
+      img {
+        margin: 0 auto;
+      }
+    }
+  }
+}
+@include respond(tablet) {
+  .clients {
+    .clients-logo {
+      img {
+        margin: 0 auto;
+      }
+      //   img:nth-child(4),
+      //   img:nth-child(5) {
+      //     margin: 0px auto;
+      //   }
+    }
+  }
+}
