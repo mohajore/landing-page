@@ -5,6 +5,7 @@ import Intro from "./Intro";
 import Features from "./Features";
 import Features2 from "./Features2";
 import AppScreen from "./AppScreen";
+import Title from "./../../blocks/Title";
 
 class Home extends Component {
   render() {
@@ -14,6 +15,7 @@ class Home extends Component {
         <Clients />
         <Features />
         <Features2 />
+        <Title />
         <AppScreen />
       </div>
     );

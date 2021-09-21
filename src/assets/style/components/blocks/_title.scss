@@ -1,0 +1,19 @@
+@import "../../abstract/mixins";
+.title {
+  margin-top: 100px;
+  .title_content {
+    text-align: center;
+    h4 {
+      font-size: 14px;
+      text-transform: uppercase;
+      color: $secondary-color;
+    }
+    h1 {
+      font-family: $main-font-bold;
+      font-size: 36px;
+      color: $title-text-color;
+      line-height: 43px;
+      margin-bottom: 20px;
+    }
+  }
+}
