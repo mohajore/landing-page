@@ -8,18 +8,26 @@ class Features extends Component {
         <Container>
           <Row>
             {/* Left Side Start */}
-            <Col md={{ span: 4, offset: 1 }} sm={12}>
+            <Col
+              lg={{ span: 4, offset: 1 }}
+              md={{ span: 4, offset: 0 }}
+              sm={12}
+            >
               <div className="features__left-side">
                 <img className="phone-pic" src="/images/img-2.png" />
-                {/* <img
+                <img
                   className="circle-icon"
                   src="/images/img-circleicon1.png"
-                /> */}
+                />
               </div>
             </Col>
             {/* Left Side Start */}
             {/* Right Side Start */}
-            <Col md={{ span: 5, offset: 1 }} sm={12}>
+            <Col
+              lg={{ span: 5, offset: 1 }}
+              md={{ span: 5, offset: 2 }}
+              sm={12}
+            >
               <div className="features__right-side">
                 <p className="features__right-side__feature1">
                   01 – ADD NEW TASK
@@ -33,7 +41,9 @@ class Features extends Component {
                 </p>
                 {/* Button Start */}
                 <div className="free-trial-button">
-                  <button>GET STARTED NOW</button>
+                  <button type="submit" class="shadow1 bgscheme">
+                    GET STARTED NOW
+                  </button>
                 </div>
                 {/* Button End */}
               </div>

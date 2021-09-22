@@ -11,13 +11,13 @@ class features2 extends Component {
             <Col md={{ span: 4, offset: 1 }} sm={12}>
               <div className="features2__left-side">
                 <img className="phone-pic" src="/images/img-3.png" />
-                {/* <img
-                  className="circle-icon"
-                  src="/images/img-circleicon1.png"
-                /> */}
+                <img
+                  className="circle-icon2"
+                  src="/images/img-circleicon2.png"
+                />
               </div>
             </Col>
-            {/* Left Side Start */}
+            {/* Left Side End */}
             {/* Right Side Start */}
             <Col md={{ span: 6, offset: 0 }} sm={12}>
               <div className="features2__right-side">
@@ -33,7 +33,9 @@ class features2 extends Component {
                 </p>
                 {/* Button Start */}
                 <div className="free-trial-button">
-                  <button>GET STARTED NOW</button>
+                  <button type="submit" class="shadow1 bgscheme">
+                    GET STARTED NOW
+                  </button>
                 </div>
                 {/* Button End */}
               </div>

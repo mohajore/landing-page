@@ -1,0 +1,50 @@
+@import "../../../abstract/mixins";
+.download {
+  padding: 100px 0;
+  text-align: center;
+  .download__content {
+    h1 {
+      font-family: $main-font-bold;
+      font-size: 56px;
+      color: #343434;
+      line-height: 45px;
+      margin-bottom: 35px;
+    }
+    p {
+      font-size: 24px;
+      margin-bottom: 48px;
+      color: #555556;
+    }
+    .appstore-googleplay-icons {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      img {
+        cursor: pointer;
+      }
+    }
+  }
+}
+@include respond(phone) {
+  .download {
+    .download__content {
+      h1 {
+        font-size: 35px;
+      }
+      p {
+        font-size: 25px;
+      }
+      .appstore-googleplay-icons {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-direction: column;
+        img {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

@@ -1,12 +1,14 @@
 @import "../../abstract/mixins";
 .title {
-  margin-top: 100px;
+  margin: 50px 0;
   .title_content {
     text-align: center;
     h4 {
       font-size: 14px;
       text-transform: uppercase;
       color: $secondary-color;
+      font-family: $main-font-bold;
+      letter-spacing: 1px;
     }
     h1 {
       font-family: $main-font-bold;

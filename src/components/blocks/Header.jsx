@@ -54,7 +54,9 @@ class Header extends Component {
               </div>
               {/* Button Start */}
               <div className="free-trial-button">
-                <button>start free trial</button>
+                <button type="submit" class="shadow1 bgscheme">
+                  start free trial
+                </button>
               </div>
               {/* Button End */}
               {/* List,Start free trial button End */}

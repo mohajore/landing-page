@@ -6,8 +6,8 @@ class Title extends Component {
       <div className="title">
         <Container>
           <div className="title_content">
-            <h4>APP SCREEN</h4>
-            <h1>How our app looks like</h1>
+            <h4>{this.props.title1}</h4>
+            <h1>{this.props.title2}</h1>
           </div>
         </Container>
       </div>

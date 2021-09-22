@@ -4,11 +4,13 @@ import { Row, Col, Container } from "react-bootstrap";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.scss";
+import Title from "./../../blocks/Title";
 
 class AppScreen extends Component {
   render() {
     return (
       <div className="appScreen">
+        <Title title1="APP SCREEN" title2="How our app looks like" />
         <Container>
           <Swiper
             // install Swiper modules
@@ -21,21 +23,23 @@ class AppScreen extends Component {
             onSwiper={(swiper) => console.log(swiper)}
             onSlideChange={() => console.log("slide change")}
             breakpoints={{
-              "@0.00": {
+              320: {
                 slidesPerView: 1,
-                spaceBetween: 10,
+                spaceBetween: 20,
               },
-              "@0.75": {
+              576: {
                 slidesPerView: 2,
                 spaceBetween: 20,
               },
-              "@1.00": {
+              // when window width is >= 480px
+              768: {
                 slidesPerView: 3,
-                spaceBetween: 40,
+                spaceBetween: 10,
               },
-              "@1.50": {
+              // when window width is >= 640px
+              1400: {
                 slidesPerView: 4,
-                spaceBetween: 50,
+                spaceBetween: 40,
               },
             }}
           >
@@ -60,7 +64,6 @@ class AppScreen extends Component {
             <SwiperSlide>
               <img src="images/img-screen2.jpg" />
             </SwiperSlide>
-            ...
           </Swiper>
         </Container>
       </div>
