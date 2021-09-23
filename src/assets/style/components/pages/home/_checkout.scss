@@ -3,11 +3,12 @@
   background: url(../../../../../images/bg1.jpg);
   background-size: cover;
   background-position: bottom;
-  padding: 210px 0;
+  padding: 220px 0;
   overflow: hidden;
   .checkout__content {
     display: flex;
     flex-direction: row;
+    position: relative;
     .right {
       flex: 3 0 0;
       overflow: hidden;
@@ -16,30 +17,63 @@
         .swiper-slide {
           border-radius: 20px;
           background-color: white;
-          .slide {
-            padding-top: 25px;
-            padding-left: 25px;
-            position: relative;
-            overflow: visible;
-            width: 350px;
-            h3 {
-              margin-top: 30px;
-              color: #343067;
-              font-size: 22px;
-            }
-            p {
-              margin-top: 20px;
-              padding-bottom: 30px;
-              padding-right: 30px;
-            }
-          }
+          // .slide {
+          //   padding-top: 25px;
+          //   padding-left: 25px;
+          //   position: relative;
+          //   overflow: visible;
+          //   width: 350px;
+          //   h3 {
+          //     margin-top: 30px;
+          //     color: #343067;
+          //     font-size: 22px;
+          //   }
+          //   p {
+          //     margin-top: 20px;
+          //     padding-bottom: 30px;
+          //     padding-right: 30px;
+          //   }
+          // }
+        }
+      }
+      .rec-carousel {
+        .fa-long-arrow-alt-left {
+          color: $secondary-color;
+          position: absolute;
+          top: 250px;
+          left: 13px;
+        }
+        .fa-long-arrow-alt-right {
+          color: $secondary-color;
+          position: absolute;
+          top: 250px;
+          left: 60px;
+        }
+      }
+      .slide {
+        padding-top: 25px;
+        padding-left: 25px;
+        position: relative;
+        overflow: visible;
+        width: 350px;
+        background-color: white;
+        border-radius: 25px;
+        h3 {
+          margin-top: 30px;
+          color: #343067;
+          font-size: 22px;
+        }
+        p {
+          margin-top: 20px;
+          padding-bottom: 30px;
+          padding-right: 30px;
         }
       }
     }
     .left {
       flex: 0 0 300px;
       text-align: left;
-      padding-top: 100px;
+      padding-top: 60px;
       ul {
         padding: 0 0 0 10px;
         li {
@@ -58,6 +92,39 @@
   .checkout {
     .checkout__content {
       flex-direction: column;
+      .right {
+        .slide {
+          width: 450px;
+        }
+        .rec-carousel {
+          .fa-long-arrow-alt-left {
+            top: 200px;
+          }
+          .fa-long-arrow-alt-right {
+            top: 200px;
+          }
+        }
+      }
+    }
+  }
+}
+@include respond(large-phone) {
+  .checkout {
+    .checkout__content {
+      flex-direction: column;
+      .right {
+        .slide {
+          width: 450px;
+        }
+        .rec-carousel {
+          .fa-long-arrow-alt-left {
+            top: 230px;
+          }
+          .fa-long-arrow-alt-right {
+            top: 230px;
+          }
+        }
+      }
     }
   }
 }
