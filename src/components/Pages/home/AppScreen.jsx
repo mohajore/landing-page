@@ -5,14 +5,73 @@ import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.scss";
 import Title from "./../../blocks/Title";
+// React elastic carousel start
+import Carousel from "react-elastic-carousel";
+// React elastic carousel end
 
 class AppScreen extends Component {
+  constructor(props) {
+    super(props);
+    this.breakPoints = [
+      { width: 1, itemsToShow: 1 },
+      { width: 550, itemsToShow: 2, itemsToScroll: 2, pagination: false },
+      { width: 850, itemsToShow: 3 },
+      { width: 1150, itemsToShow: 4, itemsToScroll: 1 },
+    ];
+  }
+
   render() {
     return (
       <div className="appScreen">
         <Title title1="APP SCREEN" title2="How our app looks like" />
         <Container>
-          <Swiper
+          <Carousel
+            showArrows={false}
+            itemPadding={[10, 18]}
+            breakPoints={this.breakPoints}
+          >
+            <div>
+              {" "}
+              <img src="images/img-screen1.jpg" />
+            </div>
+            <div>
+              {" "}
+              <img src="images/img-screen2.jpg" />
+            </div>
+            <div>
+              {" "}
+              <img src="images/img-screen3.jpg" />
+            </div>
+            <div>
+              {" "}
+              <img src="images/img-screen4.jpg" />
+            </div>
+            <div>
+              {" "}
+              <img src="images/img-screen5.jpg" />
+            </div>
+            <div>
+              {" "}
+              <img src="images/img-screen1.jpg" />
+            </div>
+            <div>
+              {" "}
+              <img src="images/img-screen2.jpg" />
+            </div>
+            <div>
+              {" "}
+              <img src="images/img-screen3.jpg" />
+            </div>
+            <div>
+              {" "}
+              <img src="images/img-screen4.jpg" />
+            </div>
+            <div>
+              {" "}
+              <img src="images/img-screen5.jpg" />
+            </div>
+          </Carousel>
+          {/* <Swiper
             // install Swiper modules
             modules={[Navigation, Pagination, Scrollbar, A11y]}
             spaceBetween={50}
@@ -64,7 +123,7 @@ class AppScreen extends Component {
             <SwiperSlide>
               <img src="images/img-screen2.jpg" />
             </SwiperSlide>
-          </Swiper>
+          </Swiper> */}
         </Container>
       </div>
     );

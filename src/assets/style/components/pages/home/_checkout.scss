@@ -1,35 +1,63 @@
 @import "../../../abstract/mixins";
 .checkout {
-  background-color: rgb(255, 136, 0);
+  background: url(../../../../../images/bg1.jpg);
+  background-size: cover;
+  background-position: bottom;
+  padding: 210px 0;
+  overflow: hidden;
   .checkout__content {
     display: flex;
     flex-direction: row;
     .right {
-      flex: 1 0 0;
-      background-color: red;
-      // .swiper-container {
-      //   .swiper-slide {
-      //     width: 200px;
-      //   }
-      // }
-      .slide {
-        padding-top: 25px;
-        padding-left: 25px;
-        h3 {
-          margin-top: 10px;
-        }
-        p {
-          margin-top: 10px;
+      flex: 3 0 0;
+      overflow: hidden;
+      .swiper-container {
+        padding: 50px 0 20px 0;
+        .swiper-slide {
+          border-radius: 20px;
+          background-color: white;
+          .slide {
+            padding-top: 25px;
+            padding-left: 25px;
+            position: relative;
+            overflow: visible;
+            width: 350px;
+            h3 {
+              margin-top: 30px;
+              color: #343067;
+              font-size: 22px;
+            }
+            p {
+              margin-top: 20px;
+              padding-bottom: 30px;
+              padding-right: 30px;
+            }
+          }
         }
       }
     }
     .left {
-      flex: 1 0 300px;
+      flex: 0 0 300px;
       text-align: left;
-      background-color: yellow;
+      padding-top: 100px;
+      ul {
+        padding: 0 0 0 10px;
+        li {
+          display: inline-block;
+          padding: 0 5px;
+          color: $secondary-color;
+        }
+      }
     }
   }
   .title_content {
     text-align: left;
+  }
+}
+@include respond(tablet) {
+  .checkout {
+    .checkout__content {
+      flex-direction: column;
+    }
   }
 }

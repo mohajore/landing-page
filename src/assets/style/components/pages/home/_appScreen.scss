@@ -1,24 +1,54 @@
 @import "../../../abstract/mixins";
 .appScreen {
-  .swiper-container {
-    overflow: hidden;
+  img {
+    width: 100%;
   }
+  // elstic carousel pagination  start
+  .rec-pagination {
+    .rec-dot {
+      background-color: $fourth-text-color;
+    }
+    .rec-dot_active {
+      border: none;
+      background-color: $secondary-color;
+    }
+    .jJKuoL {
+      box-sizing: border-box;
+      padding: 0;
+      -webkit-transition: all 250ms ease;
+      transition: all 250ms ease;
+      border: none;
+      margin: 5px;
+      background-color: rgb(99, 142, 234);
+      font-size: 1.3em;
+      content: "";
+      height: 12px;
+      width: 12px;
+      box-shadow: 0 0 1px 3px rgb(99, 142, 234);
+      border-radius: 50%;
+      outline: none;
+    }
+  } //elstic carousel pagination end
+
+  // .swiper-container {
+  //   overflow: hidden;
+  // }
 }
 @include respond(small-laptop) {
   .appScreen {
-    .swiper-container {
-      img {
-        width: 90%;
-      }
-    }
+    // .swiper-container {
+    //   img {
+    //     width: 90%;
+    //   }
+    // }
   }
 }
 @include respond(tablet) {
   .appScreen {
-    .swiper-container {
-      img {
-        width: 100%;
-      }
-    }
+    // .swiper-container {
+    //   img {
+    //     width: 100%;
+    //   }
+    // }
   }
 }

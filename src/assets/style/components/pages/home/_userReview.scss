@@ -1,84 +1,141 @@
 @import "../../../abstract/mixins";
 .User-review {
-  // margin-top: 100px;
   padding-top: 100px;
   padding-bottom: 100px;
   .User-review__content {
-    background: linear-gradient(
-      90deg,
-      rgba(202, 110, 243, 1) 0%,
-      rgba(67, 117, 248, 1) 100%
-    );
-    border-radius: 25px;
     padding-top: 50px;
-    .swiper-container {
-      padding: 50px 0 20px 0;
-      .swiper-slide-next {
-        transform: scale(1.1);
-        p {
-          color: $secondary-color;
+    .User-review__content__background {
+      background: linear-gradient(
+        90deg,
+        rgba(202, 110, 243, 1) 0%,
+        rgba(67, 117, 248, 1) 100%
+      );
+      border-radius: 25px;
+      height: 280px;
+      width: 90%;
+      margin: 0 auto;
+    }
+    .User-review__content__Swiper-container {
+      margin-top: -200px;
+      // elstic carousel pagination  start
+      .rec-pagination {
+        .rec-dot {
+          background-color: $fourth-text-color;
+        }
+        .rec-dot_active {
+          border: none;
+          background-color: $secondary-color;
+        }
+        .jJKuoL {
+          box-sizing: border-box;
+          padding: 0;
+          -webkit-transition: all 250ms ease;
+          transition: all 250ms ease;
+          border: none;
+          margin: 5px;
+          background-color: rgb(99, 142, 234);
+          font-size: 1.3em;
+          content: "";
+          height: 12px;
+          width: 12px;
+          box-shadow: 0 0 1px 3px rgb(99, 142, 234);
+          border-radius: 50%;
+          outline: none;
         }
       }
-    }
-    .user {
-      background-color: white;
-      border-radius: 20px;
-      padding-left: 20px;
-      padding-top: 80px;
-      position: relative;
-      overflow: visible;
-      cursor: pointer;
-      box-shadow: 0 22px 45px -20px rgba(20, 37, 76, 0.5);
-      width: 99%;
-      margin: 0 auto;
-
-      img {
-        position: absolute;
-        top: -20px;
-        left: 20px;
-        z-index: 9999;
-        border: solid 5px white;
-        border-radius: 50px;
-      }
-      h3 {
-        color: $third-color;
-        font-size: 21px;
-      }
-      h4 {
-        color: $fourth-text-color;
-        font-size: 17px;
-      }
-      ul {
-        margin: 0;
-        padding: 0;
-        position: absolute;
-        right: 23px;
-        top: 81px;
-        cursor: pointer;
-        padding: 0;
-        li {
-          display: inline-block;
-          list-style: none;
-          padding: 0 1px;
-          i {
-            color: $third-color;
+      //elstic carousel pagination end
+      .swiper-container {
+        padding: 50px 0 20px 0;
+        .swiper-slide-next {
+          transform: scale(1.1);
+          p {
+            color: $secondary-color;
           }
         }
       }
-      p {
-        padding-bottom: 30px;
-        font-size: 15px;
-        color: $fourth-text-color;
+      .user {
+        background-color: white;
+        border-radius: 20px;
+        padding-left: 20px;
+        padding-top: 80px;
+        position: relative;
+        overflow: visible;
+        cursor: pointer;
+        box-shadow: 0 22px 45px -20px rgba(20, 37, 76, 0.5);
+        width: 99%;
+        margin: 0 auto;
+
+        img {
+          position: absolute;
+          top: -20px;
+          left: 20px;
+          z-index: 9999;
+          border: solid 5px white;
+          border-radius: 50px;
+        }
+        h3 {
+          color: $third-color;
+          font-size: 21px;
+        }
+        h4 {
+          color: $fourth-text-color;
+          font-size: 17px;
+        }
+        ul {
+          margin: 0;
+          padding: 0;
+          position: absolute;
+          right: 23px;
+          top: 81px;
+          cursor: pointer;
+          padding: 0;
+          li {
+            display: inline-block;
+            list-style: none;
+            padding: 0 1px;
+            i {
+              color: $third-color;
+            }
+          }
+        }
+        p {
+          padding-bottom: 30px;
+          font-size: 15px;
+          color: $fourth-text-color;
+        }
       }
+      // Carousel Dots pagination Start
+      .owl-dots {
+        margin-top: 40px;
+        text-align: center;
+        .owl-dot {
+          background-color: white;
+          display: inline;
+          span {
+            cursor: pointer;
+            width: 10px;
+            height: 10px;
+            margin: 3px 3px;
+            background: #d6d6d6;
+            display: block;
+            -webkit-backface-visibility: visible;
+            transition: opacity 0.2s ease;
+            border-radius: 30px;
+          }
+        }
+      }
+      // Carousel Dots pagination End
     }
   }
 }
 @include respond(small-laptop) {
   .User-review {
     .User-review__content {
-      .user {
-        width: 90%;
-        margin: 0 auto;
+      .User-review__content__Swiper-container {
+        .user {
+          width: 90%;
+          // margin: 0 auto;
+        }
       }
     }
   }
@@ -117,6 +174,19 @@
             color: $fourth-text-color;
           }
         }
+      }
+    }
+  }
+}
+@include respond(large-phone) {
+  .User-review {
+    .User-review__content {
+      padding-top: 0px;
+      .User-review__content__background {
+        display: none;
+      }
+      .User-review__content__Swiper-container {
+        margin-top: 0px;
       }
     }
   }
