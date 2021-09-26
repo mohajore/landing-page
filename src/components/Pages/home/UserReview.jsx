@@ -30,10 +30,11 @@ class UserReview extends Component {
             {/* Swiper Carousel Start */}
             <div className="User-review__content__Swiper-container">
               {/*elastic carousel start */}
-              {/* <Carousel
+              <Carousel
                 showArrows={false}
                 itemPadding={[10, 18]}
                 breakPoints={this.breakPoints}
+                focusOnSelect={true}
               >
                 <div className="user">
                   <img src="/images/img-testimonial1.png" />
@@ -179,10 +180,10 @@ class UserReview extends Component {
                     good work!
                   </p>
                 </div>
-              </Carousel> */}
+              </Carousel>
               {/*elastic carousel End */}
-
-              <Swiper
+              {/*Swiper carousel Start */}
+              {/* <Swiper
                 // install Swiper modules
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
                 spaceBetween={50}
@@ -363,7 +364,7 @@ class UserReview extends Component {
                     </p>
                   </div>
                 </SwiperSlide>
-              </Swiper>
+              </Swiper> */}
             </div>
             {/* Swiper Carousel End */}
           </div>

@@ -2,6 +2,7 @@
 .User-review {
   padding-top: 100px;
   padding-bottom: 100px;
+
   .User-review__content {
     padding-top: 50px;
     .User-review__content__background {
@@ -17,7 +18,27 @@
     }
     .User-review__content__Swiper-container {
       margin-top: -200px;
-      // elstic carousel pagination  start
+      // elastic carousel item  start
+      .rec-carousel {
+        .rec-slider-container {
+          .rec-slider {
+            .rec-swipable {
+              .rec-carousel-item {
+                .sc-gsTEea,
+                .eQpvzW,
+                .rec .rec-item-wrapper {
+                  padding: 30px 10px !important;
+                }
+              }
+            }
+          }
+        }
+        .rec-item-wrapper {
+          padding: 530px 0;
+        }
+      }
+      // elastic carousel item  End
+      // elastic carousel pagination  start
       .rec-pagination {
         .rec-dot {
           background-color: $fourth-text-color;
@@ -43,7 +64,7 @@
           outline: none;
         }
       }
-      //elstic carousel pagination end
+      //elastic carousel pagination end
       .swiper-container {
         padding: 50px 0 20px 0;
         .swiper-slide-next {
@@ -53,6 +74,7 @@
           }
         }
       }
+
       .user {
         background-color: white;
         border-radius: 20px;
